@@ -20,7 +20,7 @@ $stdin.each_line { |line| contents &lt;&lt; line }
 
 output = RedCloth.new(contents.join()).to_html(:textile)
 
-TextMate::HTMLOutput.show(:title =&gt; "Textile Preview", :sub_title =&gt; ENV['TM_FILENAME']) do |io|
+TextMate::HTMLOutput.show(:title =&gt; "Confluence Preview", :sub_title =&gt; ENV['TM_FILENAME']) do |io|
   io &lt;&lt; output
  end
 
@@ -34,7 +34,7 @@ TextMate::HTMLOutput.show(:title =&gt; "Textile Preview", :sub_title =&gt; ENV['
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>2684F52C-663F-47F3-8320-C8FCB71E276F</string>
 </dict>

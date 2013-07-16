@@ -4,14 +4,16 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>textile</string>
+		<string>confluence</string>
+		<string>spec</string>
+		<string>brief</string>
 	</array>
 	<key>firstLineMatch</key>
-	<string>textile</string>
+	<string>confluence</string>
 	<key>keyEquivalent</key>
-	<string>^~T</string>
+	<string>^~C</string>
 	<key>name</key>
-	<string>Textile</string>
+	<string>Confluence</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -22,23 +24,23 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.heading.textile</string>
+					<string>entity.name.tag.heading.confluence</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.type.textile</string>
+					<string>entity.name.type.confluence</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.heading.textile</string>
+					<string>entity.name.tag.heading.confluence</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>^$</string>
 			<key>name</key>
-			<string>markup.heading.textile</string>
+			<string>markup.heading.confluence</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -59,23 +61,23 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.blockquote.textile</string>
+					<string>entity.name.tag.blockquote.confluence</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.type.textile</string>
+					<string>entity.name.type.confluence</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.blockquote.textile</string>
+					<string>entity.name.tag.blockquote.confluence</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>^$</string>
 			<key>name</key>
-			<string>markup.quote.textile</string>
+			<string>markup.quote.confluence</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -96,23 +98,23 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.footnote.textile</string>
+					<string>entity.name.tag.footnote.confluence</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.type.textile</string>
+					<string>entity.name.type.confluence</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.footnote.textile</string>
+					<string>entity.name.tag.footnote.confluence</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>^$</string>
 			<key>name</key>
-			<string>markup.other.footnote.textile</string>
+			<string>markup.other.footnote.confluence</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -133,23 +135,23 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.footnote.textile</string>
+					<string>entity.name.tag.footnote.confluence</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.type.textile</string>
+					<string>entity.name.type.confluence</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.footnote.textile</string>
+					<string>entity.name.tag.footnote.confluence</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>^$</string>
 			<key>name</key>
-			<string>markup.other.table.textile</string>
+			<string>markup.other.table.confluence</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -168,7 +170,7 @@
 			<key>end</key>
 			<string>^$</string>
 			<key>name</key>
-			<string>meta.paragraph.textile</string>
+			<string>meta.paragraph.confluence</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -177,23 +179,23 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.tag.paragraph.textile</string>
+							<string>entity.name.tag.paragraph.confluence</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.tag.paragraph.textile</string>
+							<string>entity.name.tag.paragraph.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(^p([&lt;&gt;=()]+)?)(\([^)]*\)|{[^}]*})*(\.)</string>
 					<key>name</key>
-					<string>entity.name.section.paragraph.textile</string>
+					<string>entity.name.section.paragraph.confluence</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -220,11 +222,11 @@
 			<array>
 				<dict>
 					<key>comment</key>
-					<string>&amp; is handled automagically by textile, so we match it to avoid text.html.basic from flagging it</string>
+					<string>&amp; is handled automagically by confluence, so we match it to avoid text.html.basic from flagging it</string>
 					<key>match</key>
 					<string>&amp;(?![A-Za-z0-9]+;)</string>
 					<key>name</key>
-					<string>text.html.textile</string>
+					<string>text.html.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -232,13 +234,13 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>^\*+(\([^)]*\)|{[^}]*})*(\s+|$)</string>
 					<key>name</key>
-					<string>markup.list.unnumbered.textile</string>
+					<string>markup.list.unnumbered.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -246,13 +248,13 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>^#+(\([^)]*\)|{[^}]*})*\s+</string>
 					<key>name</key>
-					<string>markup.list.numbered.textile</string>
+					<string>markup.list.numbered.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -260,17 +262,17 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.title.textile</string>
+							<string>string.other.link.title.confluence</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.textile</string>
+							<string>string.other.link.description.title.confluence</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>constant.other.reference.link.textile</string>
+							<string>constant.other.reference.link.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -295,7 +297,7 @@
 																#  and end of meta.link
 					</string>
 					<key>name</key>
-					<string>meta.link.reference.textile</string>
+					<string>meta.link.reference.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -303,17 +305,17 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.title.textile</string>
+							<string>string.other.link.title.confluence</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.textile</string>
+							<string>string.other.link.description.title.confluence</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.textile</string>
+							<string>markup.underline.link.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -338,7 +340,7 @@
 																#  and end of meta.link
 					</string>
 					<key>name</key>
-					<string>meta.link.inline.textile</string>
+					<string>meta.link.inline.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -346,17 +348,17 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.image.textile</string>
+							<string>markup.underline.link.image.confluence</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.textile</string>
+							<string>string.other.link.description.confluence</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.textile</string>
+							<string>markup.underline.link.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -385,7 +387,7 @@
 								)?
 					</string>
 					<key>name</key>
-					<string>meta.image.inline.textile</string>
+					<string>meta.image.inline.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -393,13 +395,13 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>\|(\([^)]*\)|{[^}]*})*(\\\||.)+\|</string>
 					<key>name</key>
-					<string>markup.other.table.cell.textile</string>
+					<string>markup.other.table.cell.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -407,13 +409,13 @@
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>\B(\*\*?)((\([^)]*\)|{[^}]*}|\[[^]]+\]){0,3})(\S.*?\S|\S)\1\B</string>
 					<key>name</key>
-					<string>markup.bold.textile</string>
+					<string>markup.bold.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -421,13 +423,13 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>\B-((\([^)]*\)|{[^}]*}|\[[^]]+\]){0,3})(\S.*?\S|\S)-\B</string>
 					<key>name</key>
-					<string>markup.deleted.textile</string>
+					<string>markup.deleted.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -435,13 +437,13 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>\B\+((\([^)]*\)|{[^}]*}|\[[^]]+\]){0,3})(\S.*?\S|\S)\+\B</string>
 					<key>name</key>
-					<string>markup.inserted.textile</string>
+					<string>markup.inserted.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -449,13 +451,13 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(?:\b|\s)_((\([^)]*\)|{[^}]*}|\[[^]]+\]){0,3})(\S.*?\S|\S)_(?:\b|\s)</string>
 					<key>name</key>
-					<string>markup.italic.textile</string>
+					<string>markup.italic.confluence</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -463,13 +465,13 @@
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.textile</string>
+							<string>entity.name.type.confluence</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>\B([@\^~%]|\?\?)((\([^)]*\)|{[^}]*}|\[[^]]+\]){0,3})(\S.*?\S|\S)\1</string>
 					<key>name</key>
-					<string>markup.italic.phrasemodifiers.textile</string>
+					<string>markup.italic.phrasemodifiers.confluence</string>
 				</dict>
 				<dict>
 					<key>comment</key>
@@ -477,13 +479,13 @@
 					<key>match</key>
 					<string>(?&lt;!w)\[[0-9+]\]</string>
 					<key>name</key>
-					<string>entity.name.tag.textile</string>
+					<string>entity.name.tag.confluence</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>68F0B1A5-3274-4E85-8B3A-A481C5F5B194</string>
 </dict>

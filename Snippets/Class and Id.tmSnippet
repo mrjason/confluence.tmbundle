@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>Class and Id</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>664A2E0F-7FB4-4FAA-8889-652FA47A817C</string>
 </dict>

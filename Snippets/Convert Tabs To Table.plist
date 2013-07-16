@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>Convert Tabs To Table</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>E0D9B2D7-163F-493B-ACC6-29AF9C5F00BF</string>
 </dict>

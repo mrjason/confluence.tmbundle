@@ -9,9 +9,9 @@
 	<key>name</key>
 	<string>Strikethrough</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>semanticClass</key>
-	<string>style.alternate.strikethrough.textile</string>
+	<string>style.alternate.strikethrough.confluence</string>
 	<key>uuid</key>
 	<string>8C3FDC27-98C9-4A15-B13A-22840DA8AE28</string>
 </dict>

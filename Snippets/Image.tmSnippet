@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>Image</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>tabTrigger</key>
 	<string>img</string>
 	<key>uuid</key>

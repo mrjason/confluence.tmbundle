@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>Acronym</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>tabTrigger</key>
 	<string>acr</string>
 	<key>uuid</key>

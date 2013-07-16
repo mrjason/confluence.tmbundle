@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Spell Checking: Disable for Raw</string>
 	<key>scope</key>
-	<string>text.html.textile markup.raw</string>
+	<string>text.html.confluence markup.raw</string>
 	<key>settings</key>
 	<dict>
 		<key>spellChecking</key>

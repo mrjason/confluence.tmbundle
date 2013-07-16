@@ -23,7 +23,7 @@ end
 	<key>output</key>
 	<string>afterSelectedText</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>7164B649-E5B6-4A2C-BF01-671528D0A780</string>
 </dict>

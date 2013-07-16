@@ -24,7 +24,7 @@
 	<key>name</key>
 	<string>Convert Bold to Bulleted List</string>
 	<key>scope</key>
-	<string>text.html.textile markup.list.unnumbered.textile</string>
+	<string>text.html.confluence markup.list.unnumbered.confluence</string>
 	<key>scopeType</key>
 	<string>local</string>
 	<key>useGlobalClipboard</key>

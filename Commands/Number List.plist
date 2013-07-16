@@ -23,7 +23,7 @@ ENV['TM_SELECTED_TEXT'].to_s.each_line() { |line|
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>EE76702D-2370-44B6-85E6-772922D963A2</string>
 </dict>

@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Typing Pairs: Defaults</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>settings</key>
 	<dict>
 		<key>smartTypingPairs</key>

@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>contactEmailRot13</key>
-	<string>npnatvnab@tznvy.pbz</string>
+	<string>jason@moodlerooms.com</string>
 	<key>contactName</key>
-	<string>Antonio Cangiano</string>
+	<string>Jason Hardin</string>
 	<key>deleted</key>
 	<array>
 		<string>A90B97AF-6C00-4F54-B7AA-A6985006F787</string>
 		<string>3E698DD8-3291-42B0-ABCD-6817A73CA816</string>
 	</array>
 	<key>description</key>
-	<string>&lt;a href="http://www.textism.com/tools/textile/"&gt;Textile&lt;/a&gt; is a lightweight markup language originally developed by Dean Allen and billed as a “humane Web text generator”. Textile converts its marked-up text input to valid, well-formed XHTML.</string>
+	<string>&lt;a href="https://www.atlassian.com/software/confluence/overview/team-collaboration-software?_mid=af35f08892ff560eaf3191a68ce906c0&gclid=CPy-86DdsrgCFSUV7AodWHIANA"&gt;Confluence&lt;/a&gt; is an Atlassian wiki product. Prior to version 5 is had a wiki markup similar to textile but with macros. This is a clone fo the textile Textmate bundle with additions for Confluence specific features.</string>
 	<key>mainMenu</key>
 	<dict>
 		<key>excludedItems</key>
@@ -108,7 +108,7 @@
 		</dict>
 	</dict>
 	<key>name</key>
-	<string>Textile</string>
+	<string>Confluence</string>
 	<key>ordering</key>
 	<array>
 		<string>2684F52C-663F-47F3-8320-C8FCB71E276F</string>

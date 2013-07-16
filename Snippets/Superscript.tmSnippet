@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>Superscript</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>E6C4BEC8-A5D9-453A-A168-2EEBD50ECDE2</string>
 </dict>

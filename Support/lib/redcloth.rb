@@ -6,12 +6,12 @@
 # Copyright:: (cc) 2004 why the lucky stiff (and his puppet organizations.)
 # License::   BSD
 #
-# (see http://hobix.com/textile/ for a Textile Reference.)
+# (see http://hobix.com/confluence/ for a Textile Reference.)
 #
 # Based on (and also inspired by) both:
 #
-# PyTextile: http://diveintomark.org/projects/textile/textile.py.txt
-# Textism for PHP: http://www.textism.com/tools/textile/
+# PyTextile: http://diveintomark.org/projects/confluence/confluence.py.txt
+# Textism for PHP: http://www.textism.com/tools/confluence/
 #
 #
 
@@ -67,7 +67,7 @@
 #  @code@
 #  %(classname)span%
 #
-#  ==notextile== (leave text alone)
+#  ==noconfluence== (leave text alone)
 #
 # == Links
 #
@@ -167,7 +167,7 @@
 class RedCloth < String
 
     VERSION = '3.0.4'
-    DEFAULT_RULES = [:textile, :markdown]
+    DEFAULT_RULES = [:confluence, :markdown]
 
     #
     # Two accessor for setting security restrictions.
@@ -220,18 +220,18 @@ class RedCloth < String
     #
     # == Textile Rules
     #
-    # The following textile rules can be set individually.  Or add the complete
-    # set of rules with the single :textile rule, which supplies the rule set in
+    # The following confluence rules can be set individually.  Or add the complete
+    # set of rules with the single :confluence rule, which supplies the rule set in
     # the following precedence:
     #
-    # refs_textile::          Textile references (i.e. [hobix]http://hobix.com/)
-    # block_textile_table::   Textile table block structures
-    # block_textile_lists::   Textile list structures
-    # block_textile_prefix::  Textile blocks with prefixes (i.e. bq., h2., etc.)
-    # inline_textile_image::  Textile inline images
-    # inline_textile_link::   Textile inline links
-    # inline_textile_span::   Textile inline spans
-    # glyphs_textile:: Textile entities (such as em-dashes and smart quotes)
+    # refs_confluence::          Textile references (i.e. [hobix]http://hobix.com/)
+    # block_confluence_table::   Textile table block structures
+    # block_confluence_lists::   Textile list structures
+    # block_confluence_prefix::  Textile blocks with prefixes (i.e. bq., h2., etc.)
+    # inline_confluence_image::  Textile inline images
+    # inline_confluence_link::   Textile inline links
+    # inline_confluence_span::   Textile inline spans
+    # glyphs_confluence:: Textile entities (such as em-dashes and smart quotes)
     #
     # == Markdown
     #
@@ -270,9 +270,9 @@ class RedCloth < String
         
         @urlrefs = {}
         @shelf = []
-        textile_rules = [:refs_textile, :block_textile_table, :block_textile_lists,
-                         :block_textile_prefix, :inline_textile_image, :inline_textile_link,
-                         :inline_textile_code, :inline_textile_span, :glyphs_textile]
+        confluence_rules = [:refs_confluence, :block_confluence_table, :block_confluence_lists,
+                         :block_confluence_prefix, :inline_confluence_image, :inline_confluence_link,
+                         :inline_confluence_code, :inline_confluence_span, :glyphs_confluence]
         markdown_rules = [:refs_markdown, :block_markdown_setext, :block_markdown_atx, :block_markdown_rule,
                           :block_markdown_bq, :block_markdown_lists, 
                           :inline_markdown_reflink, :inline_markdown_link]
@@ -280,8 +280,8 @@ class RedCloth < String
             case rule
             when :markdown
                 markdown_rules
-            when :textile
-                textile_rules
+            when :confluence
+                confluence_rules
             else
                 rule
             end
@@ -294,7 +294,7 @@ class RedCloth < String
         # start processor
         @pre_list = []
         rip_offtags text
-        no_textile text
+        no_confluence text
         hard_break text 
         unless @lite_mode
             refs text
@@ -305,7 +305,7 @@ class RedCloth < String
 
         retrieve text
 
-        text.gsub!( /<\/?notextile>/, '' )
+        text.gsub!( /<\/?noconfluence>/, '' )
         text.gsub!( /x%x%/, '&#38;' )
         clean_html text if filter_html
         text.strip!
@@ -493,7 +493,7 @@ class RedCloth < String
     TABLE_RE = /^(?:table(_?#{S}#{A}#{C})\. ?\n)?^(#{A}#{C}\.? ?\|.*?\|)(\n\n|\Z)/m
     
     # Parses a Textile table block, building HTML from the result.
-    def block_textile_table( text ) 
+    def block_confluence_table( text )
         text.gsub!( TABLE_RE ) do |matches|
 
             tatts, fullrow = $~[1..2]
@@ -532,7 +532,7 @@ class RedCloth < String
     LISTS_CONTENT_RE = /^([#*]+)(#{A}#{C}) (.*)$/m
 
     # Parses Textile lists and generates HTML
-    def block_textile_lists( text ) 
+    def block_confluence_lists( text )
         text.gsub!( LISTS_RE ) do |match|
             lines = match.split( /\n/ )
             last_line = -1
@@ -582,7 +582,7 @@ class RedCloth < String
         @
         (?=\W)/x
 
-    def inline_textile_code( text ) 
+    def inline_confluence_code( text )
         text.gsub!( CODE_RE ) do |m|
             before,lang,code,after = $~[1..4]
             lang = " lang=\"#{ lang }\"" if lang
@@ -644,26 +644,26 @@ class RedCloth < String
         end.join( "\n\n" ) )
     end
 
-    def textile_bq( tag, atts, cite, content )
+    def confluence_bq( tag, atts, cite, content )
         cite, cite_title = check_refs( cite )
         cite = " cite=\"#{ cite }\"" if cite
         atts = shelve( atts ) if atts
         "\t<blockquote#{ cite }>\n\t\t<p#{ atts }>#{ content }</p>\n\t</blockquote>"
     end
 
-    def textile_p( tag, atts, cite, content )
+    def confluence_p( tag, atts, cite, content )
         atts = shelve( atts ) if atts
         "\t<#{ tag }#{ atts }>#{ content }</#{ tag }>"
     end
 
-    alias textile_h1 textile_p
-    alias textile_h2 textile_p
-    alias textile_h3 textile_p
-    alias textile_h4 textile_p
-    alias textile_h5 textile_p
-    alias textile_h6 textile_p
+    alias confluence_h1 confluence_p
+    alias confluence_h2 confluence_p
+    alias confluence_h3 confluence_p
+    alias confluence_h4 confluence_p
+    alias confluence_h5 confluence_p
+    alias confluence_h6 confluence_p
 
-    def textile_fn_( tag, num, atts, cite, content )
+    def confluence_fn_( tag, num, atts, cite, content )
         atts << " id=\"fn#{ num }\""
         content = "<sup>#{ num }</sup> #{ content }"
         atts = shelve( atts ) if atts
@@ -672,16 +672,16 @@ class RedCloth < String
 
     BLOCK_RE = /^(([a-z]+)(\d*))(#{A}#{C})\.(?::(\S+))? (.*)$/m
 
-    def block_textile_prefix( text ) 
+    def block_confluence_prefix( text )
         if text =~ BLOCK_RE
             tag,tagpre,num,atts,cite,content = $~[1..6]
             atts = pba( atts )
 
             # pass to prefix handler
-            if respond_to? "textile_#{ tag }", true
-                text.gsub!( $&, method( "textile_#{ tag }" ).call( tag, atts, cite, content ) )
-            elsif respond_to? "textile_#{ tagpre }_", true
-                text.gsub!( $&, method( "textile_#{ tagpre }_" ).call( tagpre, num, atts, cite, content ) )
+            if respond_to? "confluence_#{ tag }", true
+                text.gsub!( $&, method( "confluence_#{ tag }" ).call( tag, atts, cite, content ) )
+            elsif respond_to? "confluence_#{ tagpre }_", true
+                text.gsub!( $&, method( "confluence_#{ tagpre }_" ).call( tagpre, num, atts, cite, content ) )
             end
         end
     end
@@ -737,7 +737,7 @@ class RedCloth < String
     def block_markdown_lists( text )
     end
 
-    def inline_textile_span( text ) 
+    def inline_confluence_span( text )
         QTAGS.each do |qtag_rc, ht, qtag_re, rtype|
             text.gsub!( qtag_re ) do |m|
              
@@ -772,7 +772,7 @@ class RedCloth < String
             (?=<|\s|$)
         /x 
 
-    def inline_textile_link( text ) 
+    def inline_confluence_link( text )
         text.gsub!( LINK_RE ) do |m|
             pre,atts,text,title,url,slash,post = $~[1..7]
 
@@ -848,7 +848,7 @@ class RedCloth < String
         end
     end
 
-    def refs_textile( text ) 
+    def refs_confluence( text )
         text.gsub!( TEXTILE_REFS_RE ) do |m|
             flag, url = $~[2..3]
             @urlrefs[flag.downcase] = [url, nil]
@@ -883,7 +883,7 @@ class RedCloth < String
             (?::#{ HYPERLINK })? # optional href
         /x 
 
-    def inline_textile_image( text ) 
+    def inline_confluence_image( text )
         text.gsub!( IMAGE_RE )  do |m|
             stln,algn,atts,url,title,href,href_a1,href_a2 = $~[1..8]
             atts = pba( atts )
@@ -935,11 +935,11 @@ class RedCloth < String
         text.gsub!( /&(?![#a-z0-9]+;)/i, "x%x%" )
     end
 
-    def no_textile( text ) 
+    def no_confluence( text )
         text.gsub!( /(^|\s)==([^=]+.*?)==(\s|$)?/,
-            '\1<notextile>\2</notextile>\3' )
+            '\1<noconfluence>\2</noconfluence>\3' )
         text.gsub!( /^ *==([^=]+.*?)==/m,
-            '\1<notextile>\2</notextile>\3' )
+            '\1<noconfluence>\2</noconfluence>\3' )
     end
 
     def clean_white_space( text ) 
@@ -973,14 +973,14 @@ class RedCloth < String
             '<sup><a href="#fn\1">\1</a></sup>\2' )
     end
     
-    OFFTAGS = /(code|pre|kbd|notextile)/
+    OFFTAGS = /(code|pre|kbd|noconfluence)/
     OFFTAG_MATCH = /(?:(<\/#{ OFFTAGS }>)|(<#{ OFFTAGS }[^>]*>))(.*?)(?=<\/?#{ OFFTAGS }|\Z)/mi
     OFFTAG_OPEN = /<#{ OFFTAGS }/
     OFFTAG_CLOSE = /<\/?#{ OFFTAGS }/
     HASTAG_MATCH = /(<\/?\w[^\n]*?>)/m
     ALLTAG_MATCH = /(<\/?\w[^\n]*?>)|.*?(?=<\/?\w[^\n]*?>|$)/m
 
-    def glyphs_textile( text, level = 0 )
+    def glyphs_confluence( text, level = 0 )
         if text !~ HASTAG_MATCH
             pgl text
             footnote_ref text
@@ -996,7 +996,7 @@ class RedCloth < String
                         codepre = 0 if codepre < 0
                     end 
                 elsif codepre.zero?
-                    glyphs_textile( line, level + 1 )
+                    glyphs_confluence( line, level + 1 )
                 else
                     htmlesc( line, :NoQuotes )
                 end
@@ -1017,17 +1017,17 @@ class RedCloth < String
                     codepre += 1
                     used_offtags[offtag] = true
                     if codepre - used_offtags.length > 0
-                        htmlesc( line, :NoQuotes ) unless used_offtags['notextile']
+                        htmlesc( line, :NoQuotes ) unless used_offtags['noconfluence']
                         @pre_list.last << line
                         line = ""
                     else
-                        htmlesc( aftertag, :NoQuotes ) if aftertag and not used_offtags['notextile']
+                        htmlesc( aftertag, :NoQuotes ) if aftertag and not used_offtags['noconfluence']
                         line = "<redpre##{ @pre_list.length }>"
                         @pre_list << "#{ $3 }#{ aftertag }"
                     end
                 elsif $1 and codepre > 0
                     if codepre - used_offtags.length > 0
-                        htmlesc( line, :NoQuotes ) unless used_offtags['notextile']
+                        htmlesc( line, :NoQuotes ) unless used_offtags['noconfluence']
                         @pre_list.last << line
                         line = ""
                     end
@@ -1063,8 +1063,8 @@ class RedCloth < String
         V_ALGN_VALS[text]
     end
 
-    def textile_popup_help( name, windowW, windowH )
-        ' <a target="_blank" href="http://hobix.com/textile/#' + helpvar + '" onclick="window.open(this.href, \'popupwindow\', \'width=' + windowW + ',height=' + windowH + ',scrollbars,resizable\'); return false;">' + name + '</a><br />'
+    def confluence_popup_help( name, windowW, windowH )
+        ' <a target="_blank" href="http://hobix.com/confluence/#' + helpvar + '" onclick="window.open(this.href, \'popupwindow\', \'width=' + windowW + ',height=' + windowH + ',scrollbars,resizable\'); return false;">' + name + '</a><br />'
     end
 
     # HTML cleansing stuff

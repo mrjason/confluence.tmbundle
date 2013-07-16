@@ -11,7 +11,7 @@ fn$1. $2</string>
 	<key>name</key>
 	<string>Footnote</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>CFF53A3D-4ADC-44F4-B60D-1DB5FAFD7317</string>
 </dict>

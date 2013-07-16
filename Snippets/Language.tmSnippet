@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>Language</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>2340F25E-B8AB-406C-8745-0B83690D816E</string>
 </dict>

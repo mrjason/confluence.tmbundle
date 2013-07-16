@@ -16,7 +16,7 @@ end
 contents = []
 $stdin.each_line { |line| contents &lt;&lt; line }
 
-puts(RedCloth.new(contents.join()).to_html(:textile))</string>
+puts(RedCloth.new(contents.join()).to_html(:confluence))</string>
 	<key>fallbackInput</key>
 	<string>document</string>
 	<key>input</key>
@@ -28,7 +28,7 @@ puts(RedCloth.new(contents.join()).to_html(:textile))</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>uuid</key>
 	<string>9B769AE9-BE8F-45B9-91E0-39533AD8114B</string>
 </dict>

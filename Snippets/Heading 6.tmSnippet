@@ -9,7 +9,7 @@ $0</string>
 	<key>name</key>
 	<string>Heading 6</string>
 	<key>scope</key>
-	<string>text.html.textile</string>
+	<string>text.html.confluence</string>
 	<key>tabTrigger</key>
 	<string>h6</string>
 	<key>uuid</key>

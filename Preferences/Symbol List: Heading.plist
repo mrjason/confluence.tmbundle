@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Symbol List: Heading</string>
 	<key>scope</key>
-	<string>text.html.textile markup.heading.textile</string>
+	<string>text.html.confluence markup.heading.confluence</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
